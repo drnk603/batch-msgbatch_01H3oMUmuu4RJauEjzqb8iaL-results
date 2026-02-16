@@ -368,7 +368,7 @@
 
         var email = currentForm.querySelector('#email');
         if (email && email.hasAttribute('required')) {
-          var emailPattern = /^[^s@]+@[^s@]+.[^s@]+$/;
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!email.value.trim()) {
             isValid = false;
             errors.push('E-mail is verplicht');
@@ -384,7 +384,7 @@
 
         var phone = currentForm.querySelector('#phone');
         if (phone && phone.hasAttribute('required')) {
-          var phonePattern = /^[+-ds()]{10,20}$/;
+          var phonePattern = /^[+\-\d\s()]{10,20}$/;
           if (!phone.value.trim()) {
             isValid = false;
             errors.push('Telefoonnummer is verplicht');
